@@ -352,9 +352,12 @@ function markerSize(population) {
   // Define a map object
   var myMap = L.map("map", {
     center: [10, -10],
-    zoom: 3,
+    zoom: 2,
     layers: [streetmap, twentytens, twothousands, nineties, eighties, seventies]
   });
+  
+
+
   
   // Pass our map layers into our layer control
   // Add the layer control to the map

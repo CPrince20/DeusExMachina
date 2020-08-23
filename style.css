@@ -8,7 +8,8 @@ body {
 #map,
 body,
 html {
-  height: 100%;
+  padding-top: 60px;
+  height: 95%;
 }
 
 
@@ -16,92 +17,4 @@ body {
   padding: 0;
   margin: 0;
   background-color: white;
-}
-
-#map,
-body,
-html {
-  padding-top: 10px;
-  height: 90%;
-}
-
-.leaflet-popup-content {
-  text-align: center;
-}
-
-/* CSS from the Leaflet-Choropleth documentation */
-.legend {
-  padding: 6px 8px;
-  font: 12px Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: black;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(241, 162, 162, 0.2);
-}
-
-.legend ul {
-  padding: 0;
-  margin: 0;
-  clear: both;
-  list-style-type: none;
-}
-
-.legend li {
-  display: inline-block;
-  width: 30px;
-  height: 22px;
-}
-
-.legend .min {
-  float: left;
-  padding-bottom: 5px;
-}
-
-.legend .max {
-  float: right;
-}
-
-h1 {
-  text-align: center;
-}
-
-h1:hover {
-  color: white;
-  background-color: black;
-}
-
-h3 {
-  text-align: center;
-}
-
-h5 {
-  text-align: center;
-}
-
-p {
-  text-align: center;
-}
-
-.leaflet-control-layers-expanded {
-  background: white;
-  opacity: 80%;
-}
-
-.leaflet-control-layers-list {
-  background: white;
-  opacity: 90%;
-}
-
-.legend.leaflet-control {
-  background:white;
-  opacity: 80%;
-}
-
-img.center {
-  display: block;
-  margin: 0 auto;
-  padding-top: 5px;
-  padding-bottom: 0px;
 }
