@@ -1,0 +1,9 @@
+.lineChartContainer {
+    position: relative;
+    top: 300px;
+    text-align: center;
+}
+.avg, .high {
+    border: 1px solid;
+    margin: 10px 0;
+}
