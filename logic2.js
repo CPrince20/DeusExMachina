@@ -52,29 +52,6 @@ function markerSize(population) {
       }
     },
     {
-      coordinates: [60, -150],
-      seventies: {
-        name: "Norway",
-        value: 0.002
-      },
-      eighties: {
-        name: "Norway",
-        value: 0.307
-      },
-      nineties: {
-        name: "Norway",
-        value: 0.657
-      },
-      twothousands: {
-        name: "Norway",
-        value: 0.99
-      },
-      twentytens: {
-        name: "Norway",
-        value: 1.17
-      }
-    },
-    {
       coordinates: [30, -80],
       seventies: {
         name: "USA",
@@ -146,23 +123,23 @@ function markerSize(population) {
     {
       coordinates: [5, 125],
       seventies: {
-        name: "Philipines",
+        name: "Philippines",
         value: 0.011
       },
       eighties: {
-        name: "Philipines",
+        name: "Philippines",
         value: 0.278
       },
       nineties: {
-        name: "Philipines",
+        name: "Philippines",
         value: 0.383
       },
       twothousands: {
-        name: "Philipines",
+        name: "Philippines",
         value: 0.522
       },
       twentytens: {
-        name: "Philipines",
+        name: "Philippines",
         value: 0.73
       }
     },
@@ -274,8 +251,8 @@ function markerSize(population) {
       L.circle(locations[i].coordinates, {
         stroke: false,
         fillOpacity: 0.75,
-        color: "gray",
-        fillColor: "gray",
+        color: "silver",
+        fillColor: "silver",
         radius: markerSize(locations[i].seventies.value)
       })
     );
