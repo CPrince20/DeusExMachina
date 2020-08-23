@@ -32,18 +32,22 @@ async function initLineChart() {
     let temp;
     switch (type) {
       case 'high': {
-        temp = Object.entries(data.filter(item => item.City.toLowerCase() === city.toLowerCase() && item.AvgTemperature > 0).reduce((acc, cur) => {
+        temp = Object.entries(data.filter(item => item.City.toLowerCase() === city.toLowerCase() && item.AvgTemperature > 0 && item.Year != 2020).reduce((acc, cur) => {
           if (acc[cur.Year] && acc[cur.Year].AvgTemperature < cur.AvgTemperature ) {
             acc[cur.Year] = cur;
           } else if (!acc[cur.Year]) {
             acc[cur.Year] = cur;
           }
           return acc;
-        }, {})).map(item => item[1]);
+        }, {})).map(item => item[1])
+          .map(item => ({
+            ...item,
+            Date: d3.timeParse('%Y-%m-%d')(`${item.Year}-${1}-${1}`),
+          }))
         break;
       }
       case 'avg': {
-        temp = Object.entries(data.filter(item => item.City.toLowerCase() === city.toLowerCase() && item.AvgTemperature > 0).reduce((acc, cur) => {
+        temp = Object.entries(data.filter(item => item.City.toLowerCase() === city.toLowerCase() && item.AvgTemperature > 0 && item.Year != 2020).reduce((acc, cur) => {
           if (acc[cur.Year]) {
             acc[cur.Year].sum += Number(cur.AvgTemperature);
             acc[cur.Year].totalDay += 1;
@@ -57,9 +61,9 @@ async function initLineChart() {
           .map(item => item[1])
           .map(item => ({
           ...item,
-          AvgTemperature: item.sum / item.totalDay
+          Date: d3.timeParse('%Y-%m-%d')(`${item.Year}-${item.Month}-${1}`),
+          AvgTemperature: Math.floor(item.sum / item.totalDay)
         }))
-        console.log(temp)
         break;
       }
     }
@@ -67,7 +71,7 @@ async function initLineChart() {
     var svg = d3.select(`.${type}`)
       .append(`svg`)
       .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom)
+      .attr('height', height + margin.top + margin.bottom + 30)
       .append('g')
       .attr('transform',
         'translate(' + margin.left + ',' + margin.top + ')');
@@ -80,25 +84,49 @@ async function initLineChart() {
 
     svg.append('g')
       .attr('transform', 'translate(0,' + height + ')')
-      .call(d3.axisBottom(x));
+      .call(d3.axisBottom(x)
+        .ticks(d3.timeYear.every(1))
+        .tickSize(-width)
+      )
+      .call(g => g.selectAll(".tick:not(:first-of-type) line")
+        .attr("stroke-opacity", 0.5)
+        .attr("stroke-dasharray", "2,2"))
+      .call(g => g.selectAll(".tick text")
+        .attr("x", 4)
+        .attr("dy", 16)
+        .style('font-size', '16px')
+      )
+
+
 
     // Add Y axis
     var y = d3.scaleLinear()
       .domain([
-        0,
+        30,
         d3.max(temp, function (d) {
           return +d.AvgTemperature;
         })])
       .range([height, 0]);
+
     svg.append('g')
-      .call(d3.axisLeft(y));
+      .call(d3.axisLeft(y)
+        .tickSize(-width)
+      )
+      .call(g => g.selectAll(".tick:not(:first-of-type) line")
+        .attr("stroke-opacity", 0.5)
+        .attr("stroke-dasharray", "2,2"))
+      .call(g => g.selectAll(".tick text")
+        .style('font-size', '16px'))
+      // .call(g => g.selectAll(".tick text")
+      //   .attr("x", 4)
+      //   .attr("dy", -4))
 
     // Add the line
     svg.append('path')
       .datum(temp)
       .attr('fill', 'none')
       .attr('stroke', 'steelblue')
-      .attr('stroke-width', 1.5)
+      .attr('stroke-width', 2.5)
       .attr('d', d3.line()
         .x(function (d) {
           return x(d.Date)
@@ -107,6 +135,22 @@ async function initLineChart() {
           return y(d.AvgTemperature)
         }),
       );
+
+    svg
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Temperature");
+
+    svg.append("text")
+      .attr("transform",
+        "translate(" + (width/2) + " ," +
+        (height + margin.top + 30) + ")")
+      .style("text-anchor", "middle")
+      .text("Date");
   }
 
   function addInputEvent() {

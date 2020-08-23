@@ -5,19 +5,14 @@ function init() {
       "1":{"name":"lineChart","amount":"60","url":"./lineChart.html"},
       "2":{"name":"name2","amount":"60","url":"https://www.google.com/"},
       "3":{"name":"name3","amount":"60","url":"https://www.google.com/"},
-      "4":{"name":"name4","amount":"60","url":"https://www.google.com/"},
-      "5":{"name":"name5","amount":"60","url":"https://www.google.com/"},
-      "6":{"name":"name6","amount":"60","url":"https://www.google.com/"}
+      "4":{"name":"name4","amount":"60","url":"https://www.google.com/"}
     };
 
   const data = d3.entries(topHoldersArray);
 
-  const text = "MAIN";
-
   const width = 270;
   const height = 270;
   const thickness = 60;
-  const duration = 750;
 
   const radius = Math.min(width, height) / 2;
   const color = d3.scaleOrdinal(d3.schemeCategory20);
@@ -28,8 +23,10 @@ function init() {
     .attr('width', width)
     .attr('height', height)
     .style('position', 'fixed')
+    .style('z-index', '99')
     .style('left', '50%')
-    .style('transform', 'translateX(-50%) translateY(-27%) scale(.5)')
+    .style('transform', 'translateX(-50%) ')
+
 
 
   const g = svg.append('g')
@@ -116,5 +113,12 @@ function init() {
       window.open('/')
     })
 
+  svg
+    .attr('height', 290)
+    .append('text')
+    .text('the title')
+    .attr('x', 100)
+    .attr('y', 290)
+    .style('font-size', 20)
 }
 init();
