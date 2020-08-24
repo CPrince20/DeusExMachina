@@ -3,12 +3,12 @@ body {
   padding: 0;
   margin: 0;
   /* background: url(Images/imageedit_2_9087236380.png); */
-  background-repeat: repeat-x;
+  /* background-repeat: repeat-x;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  background-color: black;
+  background-color: black; */
 }
 
 /* set map, body, and html to 100% of the screen size */
@@ -18,10 +18,60 @@ html {
   padding-top: 30px;
   height: 95%;
   /* background: url(Images/imageedit_2_9087236380.png); */
-  background-color: black;
+  background-color: rgb(61, 72, 73);
 }
 
 .jumbotron {
     
   /* background: url(Images/imageedit_2_9087236380.png); */
+}
+
+#map {
+  margin-top: 100px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+h1 {
+  /* text-align: center; */
+  font-size: 65px;
+  color: #fffdd0;
+  width: 900px;
+  margin-left: 260px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+h3 {
+  text-align: center;
+  color: #fffdd0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+}
+
+p {
+  width: 500px;
+  font-size: 15px;
+  color: #fffdd0;
+}
+
+.title {
+  margin-left: 600px;
+  color: #fffdd0;
+  
+}
+
+.Title {
+  position: relative;
+  height: 200px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: none;
+  /* text-align: center; */
+  /* font-size: 30px; */
 }

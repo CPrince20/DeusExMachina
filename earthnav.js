@@ -3,9 +3,9 @@ function init() {
     const topHoldersArray =
       {
         "1":{"name":"City Charts","amount":"60","url":"Peter's Code/lineChart.html"},
-        "2":{"name":"Oracle","amount":"60","url":"Peter's Code/lineChart.html"},
-        "3":{"name":"name3","amount":"60","url":"https://www.google.com/"},
-        "4":{"name":"Maps","amount":"60","url":"/map.html"}
+        "2":{"name":"Oracle","amount":"60","url":"Peter's Code/machineLearning.html"},
+        "3":{"name":"Sources","amount":"60","url":"Peter's Code/sources.html"},
+        "4":{"name":"Maps","amount":"60","url":"/map2.html"}
       };
   
     const data = d3.entries(topHoldersArray);
