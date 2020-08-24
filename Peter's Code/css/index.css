@@ -7,3 +7,45 @@
     border: 1px solid;
     margin: 10px 0;
 }
+
+body { 
+    background: url(../../Images/imageedit_2_9087236380.png);
+    background-repeat: repeat-x;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.container { 
+    position: relative;
+    height: 600px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: auto;
+}
+span {
+    background: rgb(61, 72, 73, 0.75);
+    color: #fffdd0;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    padding: 20px;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.Title {
+    position: relative;
+    height: 150px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: auto;
+    text-align: center;
+    font-size: 30px;
+}
