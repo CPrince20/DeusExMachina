@@ -59,3 +59,25 @@ span {
     margin-bottom: 5px;
     
   }
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.focus circle {
+    fill: steelblue;
+}
+
+.focus text {
+    font-size: 14px;
+}
+
+.tooltip {
+    fill: white;
+    stroke: #000;
+    text-align: center;
+}
+
+.tooltip-date, .tooltip-likes {
+    font-weight: bold;
+}

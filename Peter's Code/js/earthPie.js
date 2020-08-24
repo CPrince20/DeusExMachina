@@ -2,7 +2,7 @@ function init() {
 
   const topHoldersArray =
     {
-      "1":{"name":"City Charts","amount":"60","url":"Peter's Code/lineChart.html"},
+      "1":{"name":"City Charts","amount":"60","url":"./lineChart.html"},
       "2":{"name":"Oracle","amount":"60","url":"Peter's Code/lineChart.html"},
       "3":{"name":"name3","amount":"60","url":"https://www.google.com/"},
       "4":{"name":"Maps","amount":"60","url":"/map.html"}
@@ -116,7 +116,6 @@ function init() {
   svg
     .attr('height', 290)
     .append('text')
-  //   .text('the title')
     .attr('x', 100)
     .attr('y', 290)
     .style('font-size', 20)
