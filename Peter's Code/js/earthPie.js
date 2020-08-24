@@ -18,15 +18,15 @@ function init() {
     const color = d3.scaleOrdinal(d3.schemeCategory20);
   
     const svg = d3.select("#topHoldersChart")
-        .append('svg')
-        .attr('class', 'pie')
-        .attr('width', width)
-        .attr('height', height)
-        .style('position', 'fixed')
-        .style('z-index', '99')
-        .style('left', '10%')
-        .style('top', '8%')
-        .style('transform', 'translateX(-50%) ')
+      .append('svg')
+      .attr('class', 'pie')
+      .attr('width', width)
+      .attr('height', height)
+      .style('position', 'fixed')
+      .style('z-index', '99')
+      .style('left', '50%')
+      .style('transform', 'translateX(-50%) ')
+  
   
   
     const g = svg.append('g')
@@ -116,10 +116,9 @@ function init() {
     svg
       .attr('height', 290)
       .append('text')
-    //   .text('the title')
+      .text('the title')
       .attr('x', 100)
       .attr('y', 290)
       .style('font-size', 20)
   }
   init();
-  

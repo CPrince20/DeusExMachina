@@ -2,19 +2,15 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: black;
 }
 
 /* set map, body, and html to 100% of the screen size */
 #map,
 body,
 html {
-  padding-top: 60px;
+  padding-top: 40px;
   height: 95%;
+  background-color: black;
 }
 
-
-body {
-  padding: 0;
-  margin: 0;
-  background-color: white;
-}
