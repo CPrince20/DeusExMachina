@@ -2,6 +2,12 @@
 body {
   padding: 0;
   margin: 0;
+  /* background: url(Images/imageedit_2_9087236380.png); */
+  background-repeat: repeat-x;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   background-color: black;
 }
 
@@ -9,8 +15,12 @@ body {
 #map,
 body,
 html {
-  padding-top: 40px;
+  padding-top: 30px;
   height: 95%;
+  /* background: url(Images/imageedit_2_9087236380.png); */
   background-color: black;
 }
 
+.jumbotron {
+  background: url(Images/imageedit_2_9087236380.png);
+}

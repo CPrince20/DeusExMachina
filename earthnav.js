@@ -25,7 +25,7 @@ function init() {
         .style('position', 'fixed')
         .style('z-index', '99')
         .style('left', '10%')
-        .style('top', '8%')
+        .style('top', '6.45%')
         .style('transform', 'translateX(-50%) ')
   
   
