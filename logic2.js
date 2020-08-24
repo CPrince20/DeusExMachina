@@ -353,7 +353,7 @@ function markerSize(population) {
   var myMap = L.map("map", {
     center: [10, -10],
     zoom: 2,
-    layers: [streetmap, twentytens, twothousands, nineties, eighties, seventies]
+    layers: [satellitemap, twentytens, twothousands, nineties, eighties, seventies]
   });
   
 

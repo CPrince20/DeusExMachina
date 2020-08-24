@@ -2,10 +2,10 @@ function init() {
 
     const topHoldersArray =
       {
-        "1":{"name":"lineChart","amount":"60","url":"./lineChart.html"},
-        "2":{"name":"name2","amount":"60","url":"https://www.google.com/"},
+        "1":{"name":"City Charts","amount":"60","url":"Peter's Code/lineChart.html"},
+        "2":{"name":"Oracle","amount":"60","url":"Peter's Code/lineChart.html"},
         "3":{"name":"name3","amount":"60","url":"https://www.google.com/"},
-        "4":{"name":"name4","amount":"60","url":"https://www.google.com/"}
+        "4":{"name":"Maps","amount":"60","url":"/map.html"}
       };
   
     const data = d3.entries(topHoldersArray);
