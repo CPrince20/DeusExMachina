@@ -1,215 +1,192 @@
-// Function to determine marker size based on population
-function markerSize(population) {
-    return population * 1000000;
+// Function to determine marker size based on value
+function markerSize(value) {
+    return value * 1000000;
   }
   
-  // An array containing all of the information needed to create city and state markers
+  // An array containing all of the information needed to create markers
   var locations = [
     {
       coordinates: [80, -10],
       seventies: {
-        name: "Greenland",
+        name: "Arctic",
         value: 0
       },
       eighties: {
-        name: "Greenland",
+        name: "Arctic",
         value: 0.247
       },
       nineties: {
-        name: "Greenland",
+        name: "Arctic",
         value: 0.613
       },
       twothousands: {
-        name: "Greenland",
+        name: "Arctic",
         value: 1.402
       },
       twentytens: {
-        name: "Greenland",
+        name: "Arctic",
         value: 2.287
       }
     },
     {
-      coordinates: [60, -150],
+      coordinates: [30, -120],
       seventies: {
-        name: "Alaska",
-        value: 0.002
-      },
-      eighties: {
-        name: "Alaska",
-        value: 0.307
-      },
-      nineties: {
-        name: "Alaska",
-        value: 0.657
-      },
-      twothousands: {
-        name: "Alaska",
-        value: 0.99
-      },
-      twentytens: {
-        name: "Alaska",
-        value: 1.17
-      }
-    },
-    {
-      coordinates: [30, -80],
-      seventies: {
-        name: "USA",
+        name: "North America",
         value: 0
       },
       eighties: {
-        name: "USA",
-        value: 0.046
+        name: "North America",
+        value: 0.294
       },
       nineties: {
-        name: "USA",
-        value: 0.307
+        name: "North America",
+        value: 0.489
       },
       twothousands: {
-        name: "USA",
-        value: 0.628
+        name: "North America",
+        value: 0.825
       },
       twentytens: {
-        name: "USA",
-        value: 0.867
+        name: "North America",
+        value: 1.156
       }
     },
     {
-      coordinates: [30, 30],
+      coordinates: [40, 20],
       seventies: {
-        name: "Egypt",
+        name: "Europe",
         value: 0
       },
       eighties: {
-        name: "Egypt",
-        value: 0.046
+        name: "Europe",
+        value: 0.021
       },
       nineties: {
-        name: "Egypt",
-        value: 0.307
+        name: "Europe",
+        value: 0.523
       },
       twothousands: {
-        name: "Egypt",
-        value: 0.628
+        name: "Europe",
+        value: 1.05
       },
       twentytens: {
-        name: "Egypt",
-        value: 0.867
+        name: "Europe",
+        value: 1.401
       }
     },
     {
       coordinates: [0, -50],
       seventies: {
-        name: "Brazil",
-        value: 0.011
+        name: "South America",
+        value: 0.084
       },
       eighties: {
-        name: "Brazil",
-        value: 0.278
+        name: "South America",
+        value: 0.344
       },
       nineties: {
-        name: "Brazil",
-        value: 0.383
+        name: "South America",
+        value: 0.558
       },
       twothousands: {
-        name: "Brazil",
-        value: 0.522
+        name: "South America",
+        value: 0.76
       },
       twentytens: {
-        name: "Brazil",
-        value: 0.73
+        name: "South America",
+        value: 1.082
       }
     },
     {
-      coordinates: [5, 125],
+      coordinates: [20, 115],
       seventies: {
-        name: "Philippines",
-        value: 0.011
+        name: "Asia",
+        value: 0.06
       },
       eighties: {
-        name: "Philippines",
-        value: 0.278
+        name: "Asia",
+        value: 0.326
       },
       nineties: {
-        name: "Philippines",
-        value: 0.383
+        name: "Asia",
+        value: 0.684
       },
       twothousands: {
-        name: "Philippines",
-        value: 0.522
+        name: "Asia",
+        value: 1.134
       },
       twentytens: {
-        name: "Philippines",
-        value: 0.73
+        name: "Asia",
+        value: 1.336
       }
     },
     {
       coordinates: [-30, 115],
       seventies: {
         name: "Australia",
-        value: 0.167
+        value: 0.135
       },
       eighties: {
         name: "Australia",
-        value: 0.279
+        value: 0.422
       },
       nineties: {
         name: "Australia",
-        value: 0.328
+        value: 0.53
       },
       twothousands: {
         name: "Australia",
-        value: 0.504
+        value: 0.703
       },
       twentytens: {
         name: "Australia",
-        value: 0.692
+        value: 0.946
       }
     },
     {
-      coordinates: [-30, 30],
+      coordinates: [-10, 40],
       seventies: {
-        name: "South Africa",
-        value: 0.167
+        name: "Africa",
+        value: 0.005
       },
       eighties: {
-        name: "South Africa",
-        value: 0.279
-      },
-      nineties: {
-        name: "South Africa",
-        value: 0.328
-      },
-      twothousands: {
-        name: "South Africa",
-        value: 0.504
-      },
-      twentytens: {
-        name: "South Africa",
-        value: 0.692
-      }
-    },
-    {
-      coordinates: [-55, -70],
-      seventies: {
-        name: "Argentina",
-        value: 0.129
-      },
-      eighties: {
-        name: "Argentina",
-        value: 0.324
-      },
-      nineties: {
-        name: "Argentina",
+        name: "Africa",
         value: 0.29
       },
+      nineties: {
+        name: "Africa",
+        value: 0.491
+      },
       twothousands: {
-        name: "Argentina",
-        value: 0.181
+        name: "Africa",
+        value: 0.819
       },
       twentytens: {
-        name: "Argentina",
-        value: 0.251
+        name: "Africa",
+        value: 1.158
+      }
+    },
+    {
+      coordinates: [17, -155],
+      seventies: {
+        name: "Hawaii",
+        value: 0
+      },
+      eighties: {
+        name: "Hawaii",
+        value: 0.31
+      },
+      nineties: {
+        name: "Hawaii",
+        value: 0.171
+      },
+      twothousands: {
+        name: "Hawaii",
+        value: 0.184
+      },
+      twentytens: {
+        name: "Hawaii",
+        value: 0.561
       }
     },
     {
@@ -237,16 +214,16 @@ function markerSize(population) {
     }
   ];
   
-  // Define arrays to hold created city and state markers
+  // Define arrays to hold markers
   var seventiesMarkers = [];
   var eightiesMarkers = [];
   var ninetiesMarkers = [];
   var twothousandsMarkers = [];
   var twentytensMarkers = [];
  
-  // Loop through locations and create city and state markers
+  // Loop through locations and markers
   for (var i = 0; i < locations.length; i++) {
-    // Setting the marker radius for the state by passing population into the markerSize function
+    // Setting the marker radius by passing value into the markerSize function
     seventiesMarkers.push(
       L.circle(locations[i].coordinates, {
         stroke: false,
@@ -257,7 +234,6 @@ function markerSize(population) {
       })
     );
   
-    // Setting the marker radius for the city by passing population into the markerSize function
     eightiesMarkers.push(
       L.circle(locations[i].coordinates, {
         stroke: false,
@@ -325,7 +301,7 @@ function markerSize(population) {
     accessToken: API_KEY
   });
   
-  // Create two separate layer groups: one for cities and one for states
+  // Create separate layer groups
   var seventies = L.layerGroup(seventiesMarkers);
   var eighties = L.layerGroup(eightiesMarkers);
   var nineties = L.layerGroup(ninetiesMarkers);
@@ -357,8 +333,6 @@ function markerSize(population) {
   });
   
 
-
-  
   // Pass our map layers into our layer control
   // Add the layer control to the map
   L.control.layers(baseMaps, overlayMaps, {
