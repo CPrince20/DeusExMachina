@@ -39,6 +39,7 @@ img {
 
 h1 {
   /* text-align: center; */
+  text-shadow: 2px 2px 1px black;
   font-size: 65px;
   color: #fffdd0;
   width: 900px;
@@ -53,6 +54,9 @@ h3 {
 
 }
 
+p:hover {
+  color: red;
+}
 p {
   font-size: 15px;
   width: 740px;

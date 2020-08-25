@@ -110,7 +110,7 @@ function init() {
       .style('fill', 'url("#image")')
       .style('cursor', 'pointer')
       .on('click', function () {
-        window.open('/')
+        window.location.href="Peter's Code/index.html"
       })
   
     svg
