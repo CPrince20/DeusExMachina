@@ -44,13 +44,14 @@ function init() {
     .sort(null);
 
   const inner = g.selectAll('path')
-    .data(pie(data))
-    .enter()
-    .append("g")
-    .on("click", function(d) {
-      console.log(d)
-      window.open(d.data.value.url);
-    })
+  .data(pie(data))
+  .enter()
+  .append('g')
+  .on('click', function (d) {
+    console.log(d)
+    //window.open(d.data.value.url);
+    window.location.href=d.data.value.url;
+  })
 
   inner.append('path')
     .attr("id", function(d,i) { return "textArc_" + i; })
@@ -110,7 +111,7 @@ function init() {
     .style('fill', 'url("#image")')
     .style('cursor', 'pointer')
     .on('click', function () {
-      window.open('/')
+      window.location.href='index.html'
     })
 
   svg
